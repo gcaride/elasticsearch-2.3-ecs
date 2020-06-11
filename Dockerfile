@@ -6,9 +6,5 @@ RUN bin/plugin install cloud-aws
 RUN bin/plugin install mobz/elasticsearch-head
 RUN bin/plugin install analysis-phonetic
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
-COPY elasticsearch.yml /etc/default/elasticsearch.yml
-
-VOLUME /usr/share/elasticsearch/data
-
-EXPOSE 9200 9300
+COPY elasticsearch.yml config/elasticsearch.yml
+COPY elasticsearch-entrypoint.sh /docker-entrypoint.sh
