@@ -5,6 +5,7 @@ WORKDIR /usr/share/elasticsearch
 RUN bin/plugin install cloud-aws
 RUN bin/plugin install mobz/elasticsearch-head
 RUN bin/plugin install analysis-phonetic
+RUN chmod +x elasticsearch-entrypoint.sh
 
 COPY elasticsearch-entrypoint.sh /docker-entrypoint.sh
 COPY elasticsearch.yml /etc/default/elasticsearch.yml
