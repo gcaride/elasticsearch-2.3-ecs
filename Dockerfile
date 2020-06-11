@@ -7,7 +7,7 @@ RUN bin/plugin install mobz/elasticsearch-head
 RUN bin/plugin install analysis-phonetic
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
-COPY elasticsearch /etc/default/elasticsearch
+COPY elasticsearch.yml /etc/default/elasticsearch.yml
 
 VOLUME /usr/share/elasticsearch/data
 
