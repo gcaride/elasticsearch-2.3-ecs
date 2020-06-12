@@ -6,6 +6,6 @@ cluster.name: competir-elasticsearch
 plugin.mandatory: cloud-aws
 network.publish_host: _ec2:privateIp_
 discovery.type: ec2
-discovery.ec2.groups: sg-0b1a8c816e2e25e3c
+discovery.ec2.groups: sg-026fa8efaa0a21160
 discovery.zen.ping.multicast.enabled: false
 discovery.zen.minimum_master_nodes: 2
